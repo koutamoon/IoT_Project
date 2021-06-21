@@ -6,7 +6,7 @@ import wiringpi as pi
 import time
 
 # 赤線でRaspberry Piから出ている箇所のGPIO番号
-LED_PIN = 23
+LED_PIN = 18
 
 pi.wiringPiSetupGpio()
 # GPIOを出力モードに設定
