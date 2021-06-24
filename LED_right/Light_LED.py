@@ -1,5 +1,6 @@
 '''
 LEDを１つ点灯させる
+点灯している時間を人間に検知できない間隔で長くすることで明るく見える
 '''
 
 import wiringpi as pi
@@ -14,9 +15,7 @@ pi.pinMode(LED_PIN, pi.OUTPUT)
 
 while True:
     pi.digitalWrite(LED_PIN, pi.LOW)
-    print('LOW')
-    time.sleep(1)
+    time.sleep(0.0001)
 
     pi.digitalWrite(LED_PIN, pi.HIGH)
-    print('HIGH')
-    time.sleep(1)
+    time.sleep(0.005)
