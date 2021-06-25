@@ -25,7 +25,9 @@ pi.softPwmCreate(LED_PIN_GREEN, 0, 100)
 pi.softPwmCreate(LED_PIN_BLUE, 0, 100)
 pi.softPwmCreate(LED_PIN_RED, 0, 100)
 
-while True:
+count = 0
+
+while count < 3:
     pi.softPwmWrite(LED_PIN_GREEN,100)
     pi.softPwmWrite(LED_PIN_BLUE, 100)
     pi.digitalWrite(LED_PIN_RED, 0)
@@ -45,4 +47,6 @@ while True:
     pi.softPwmWrite(LED_PIN_BLUE, 100)
     pi.digitalWrite(LED_PIN_RED, 100)
     time.sleep(1)
+    count+=1
 
+pi.cleanup()
